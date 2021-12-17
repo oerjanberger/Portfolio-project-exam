@@ -56,6 +56,3 @@ function createBlogList(result) {
     }
 }
 showMoreBtn.addEventListener("click", showMoreBlogs);
-
-
-
