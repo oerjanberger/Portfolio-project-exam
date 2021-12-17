@@ -1,0 +1,754 @@
+/* General */
+@font-face {
+    font-family: "monotype-modern-display";
+    src:url("https://use.typekit.net/af/71a30f/00000000000000007735bb37/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/71a30f/00000000000000007735bb37/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/71a30f/00000000000000007735bb37/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "meno-banner";
+    src:url("https://use.typekit.net/af/78ca66/00000000000000003b9af038/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/78ca66/00000000000000003b9af038/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/78ca66/00000000000000003b9af038/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+.loading-container {
+    background-color: white;
+    min-width: 100%;
+    min-height: 100%;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    margin: 0px auto;
+    top: 0;
+    z-index: 1;
+}
+
+.loading {
+    max-width: 250px;
+    animation-name: spin;
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "monotype-modern-display", sans-serif;
+    color: var(--vehicleTalk-blue);
+}
+
+h2 {
+    font-size: 1.1rem;
+}
+
+p {
+    font-family: "meno-banner", serif;
+}
+
+main {
+    height: 100%;
+    max-width: 750px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Header and Nav*/
+header {
+    border-bottom: 1px solid var(--vehicleTalk-grey);
+}
+nav {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav img {
+    max-width: 100px;
+}
+
+nav img:hover {
+    cursor: pointer;
+}
+
+.menu-button {
+    background-color: white;
+    border: none;
+}
+
+.alt-text {
+    position: absolute;
+    left: -9999rem;
+}
+
+.hamburger-container {
+    align-self: center;
+}
+
+.close-nav-menu {
+    display: none;
+}
+
+.hamburger-menu,
+.close-Menu {
+    align-self: center;
+    font-size: 1.3rem;
+    margin-right: 10px;
+    color: var(--vehicleTalk-grey);
+    cursor: pointer;
+}
+
+.open {
+    animation-name: open;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear; 
+}
+
+.close {
+    animation-name: close;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear; 
+}
+
+@keyframes open {
+    from {
+        transform:rotate(0deg)
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes close {
+    from {
+        transform:rotate(180deg)
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+#nav-menu-container {
+    position: relative;
+}
+
+.navigation-items {
+    padding: 20px 20%;
+    display: none;
+    justify-items: center;
+    max-width: 200px;
+    background-color: var(--vehicleTalk-white);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.navigation-items p {
+    font-size: 1.2rem;
+    color: var(--vehicleTalk-blue);
+    font-weight: bold;
+}
+
+.searchbar {
+    display: flex;
+}
+
+form.searchbar input[type="search"],
+form.searchbar button {
+    border: none;
+    border-bottom: 2px solid var(--vehicleTalk-grey);
+    font-family: "meno-banner", serif;
+    color: var(--vehicleTalk-grey);
+    font-size: 1.2rem;
+}
+
+form.searchbar input[type="search"] {
+    width: 60%;
+    margin-left: 30px;
+    background: var(--vehicleTalk-white);
+}
+  
+form.searchbar button {
+    background: none;
+    cursor: pointer;
+}
+
+.current {
+    padding: 0px 20px;
+    border-bottom: 2px solid var(--vehicleTalk-grey);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--vehicleTalk-grey);
+    margin-top: auto;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: space-evenly;
+    width: 650px;
+}
+
+.footer-social .fab {
+    margin: 10px 0px;
+    color: var(--vehicleTalk-grey);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.fa-facebook-f:hover {
+    color: #3b5998;
+}
+
+.fa-twitter:hover {
+    color: #08a0e9;
+}
+
+.fa-snapchat-ghost:hover {
+    color: #bdba03;
+}
+
+.fa-instagram:hover {
+    color: #c13584;
+}
+
+.fa-tiktok:hover {
+    color: #010101;
+    text-shadow: 2px 3px#ee1d52, -2px -3px #69c9d0;
+}
+
+.fa-youtube:hover {
+    color: #e62117;
+}
+
+/* Buttons / Icons and Images */
+.homepage-image {
+    min-width: 100%;
+    max-height: 20vh;
+    object-fit: cover;
+}
+
+.button-container {
+    display: grid;
+    justify-items: center;
+}
+
+.inputsandbuttons {
+    border: none;
+    background-color: var(--vehicleTalk-white);
+    padding: 10px 0px;
+    border-radius: 5px;
+    width: 25vh;
+    font-family: "monotype-modern-display", sans-serif;
+    font-size: 0.9rem;
+    color: var(--vehicleTalk-blue);
+    box-shadow: 2px 3px 2px rgba(128, 128, 128, 0.5);
+}
+
+.inputsandbuttons:hover {
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background-color: var(--vehicleTalk-blue);
+    color: var(--vehicleTalk-white);
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.about-image {
+    min-width: 90%;
+    max-width: 100%;
+    max-height: 30vh;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 10px 10px;
+    box-shadow: 3px 5px 4px rgba(128, 128, 128, 0.5);
+}
+
+.about-image:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    box-shadow: 6px 8px 7px rgba(128, 128, 128, 1);
+}
+
+.image-modal-container {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    padding-top: 70px;
+    width: 100%;
+    height: 97%;
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+.image-modal {
+    margin: auto;
+    display: block;
+    overflow: auto;
+    max-width: 100%;
+    max-height: 97%;
+    border-radius: 5px;
+}
+
+.closebtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: var(--vehicleTalk-blue);
+    font-size: 2.5rem;
+}
+
+.closebtn:hover {
+    color: var(--vehicleTalk-white);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Index page and styles that are used again other places*/
+.search-container {
+    display: none;
+}
+
+.intro-section,
+.latest-blogs-section {
+    margin: 0px 15px;
+}
+
+.intro-paragaph-container p::first-letter {
+    float: left;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--vehicleTalk-red);
+    margin-right: 7px;
+    line-height: 1;
+}
+
+.intro-paragaph-container {
+    border-left: 1px solid var(--vehicleTalk-grey);
+}
+
+.intro-paragaph-container p {
+    margin-left: 10px;
+    font-family: "meno-banner", serif;
+    color: var(--vehicleTalk-grey);
+    font-size: 0.8rem;
+}
+.latest-blogs-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.slideshow-button {
+    border: none;
+    background-color: var(--vehicleTalk-white);
+    padding: 10px 0px;
+    border-radius: 5px;
+    width: 5vh;
+    height: 20vh;
+    font-size: 2rem;
+    color: var(--vehicleTalk-grey);
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.slideshow-blogs-container {
+    min-width: 210px;
+    display: grid;
+    grid-template-columns: auto auto; 
+}
+
+.slideshow-blogs-container a{
+    max-width: 100px;
+}
+
+.slideshow-blog {
+    max-width: 100px;
+    background-color: var(--vehicleTalk-white);
+    border-radius: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    box-shadow: 5px 7px 6px rgba(128, 128, 128, 0.5);
+}
+
+.slideshow-blog img {
+    width: 100px;
+    border-radius: 5px 5px 0px 0px;
+    object-fit: cover;
+    height: 10vh;
+}
+
+.slideshow-blog h3 {
+    font-size: 0.6rem;
+    color: var(--vehicleTalk-blue);
+    margin: 5px;
+    min-height: 30px;
+}
+
+.slideshow-blog p {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.slideshow-date {
+    color: var(--vehicleTalk-grey);
+    font-size: 0.5rem;
+}
+
+.slideshow-page-selector {
+    text-align: center;
+}
+
+.fa-circle {
+    margin: 10px 0px;
+    color: var(--vehicleTalk-grey);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 5px 10px 20px 10px;
+}
+
+.link {
+    color: var(--vehicleTalk-red);
+    font-size: 0.6rem;
+}
+
+.slideshow-button:hover {
+    box-shadow: 2px 3px 2px rgba(128, 128, 128, 0.5);
+    cursor: pointer;
+}
+
+/* About page */
+.about-section-2 {
+    margin-bottom: 20px;
+}
+
+/* Contact page */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputs {
+    width: 90%;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.message {
+    height: 20vh;
+    margin-bottom: 20px;
+}
+
+.formError {
+    color: var(--vehicleTalk-red);
+    margin-left: 15px;
+    align-self: baseline; 
+}
+
+#nameError,
+#emailError,
+#subjectError,
+#messageError {
+    display: none;
+}
+
+/*Blog list */
+.blog-list-container {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+}
+
+.blog-preview {
+    max-width: 250px;
+    background-color: var(--vehicleTalk-white);
+    border-radius: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    box-shadow: 5px 7px 6px rgba(128, 128, 128, 0.5);
+}
+
+.blog-preview:hover,
+.slideshow-blog:hover {
+    font-weight: bold;
+    box-shadow: 10px 12px 11px rgba(128, 128, 128, 1);
+    transition: 0.3s;
+}
+
+.blog-preview:hover .blog-preveiw-link:before,
+.slideshow-blog:hover .link:before{
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    content: "\f061";
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+.blog-preview:hover h2 {
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+.slideshow-blog:hover h3 {
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.blog-list-image {
+    width: 250px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.blog-preview h2 {
+    margin: 10px 10px;
+    font-size: 1rem;
+}
+
+.blog-preveiw-text {
+    font-size: 0.6rem;
+    color: var(--vehicleTalk-grey);
+    margin: 0px 10px;
+}
+
+.authoranddate {
+    display: flex;
+    justify-content: space-between;
+}
+
+.authoranddate p {
+    font-size: 0.5rem;
+    margin: 10px 10px;
+    color: var(--vehicleTalk-grey);
+}
+
+.blog-preveiw-link {
+    color:var(--vehicleTalk-red);
+    font-size: 0.6rem;
+    text-align: right;
+    margin-right: 10px;
+}
+
+/* Blog specific */
+.blog-specific-h1 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.authorinfo-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.profilepicture {
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 50px;
+}
+
+.author-info {
+    margin-left: 15px;
+}
+
+.author-info p {
+    font-size: 0.6rem;
+    margin: 0px 0px 5px 0px;
+}
+
+.author-twitter-info {
+    display: flex;
+    align-items: baseline;
+}
+
+.author-twitter-info p {
+    color: var(--vehicleTalk-lightRed);
+}
+
+.author-twitter-link {
+    color: var(--vehicleTalk-grey);
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.blog-specific-date {
+    font-size: 0.5rem;
+    margin-top: 0px;
+}
+
+.tags {
+    max-width: 50px;
+    max-height: 20px;
+    font-size: 0.5rem;
+    color: var(--vehicleTalk-grey);
+    padding: 5px;
+    margin: 5px 3px 0px 0px;
+}
+
+.quote {
+    font-family: "monotype-modern-display", sans-serif;
+    font-size: 1.5rem;
+    color: var(--vehicleTalk-red);
+    margin: 10px 30px;
+}
+
+.links-to-other-blogs {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 15px;
+}
+
+.links-to-other-blogs p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--vehicleTalk-red);
+    margin-bottom: 5px;
+}
+
+.all-blogs {
+    max-width: 90px;
+    max-height: 30px;
+    padding: 3px;
+    margin-top: 40px
+}
+
+.submit-comment {
+    text-align: center;
+}
+
+.comments-not-working:hover {
+    background-color: var(--vehicleTalk-white);
+    color: var(--vehicleTalk-blue);
+}
+
+.others-comments {
+    display: grid;
+}
+
+.comments {
+    place-self: center;
+    max-width: 250px;
+    background-color: var(--vehicleTalk-white);
+    border-radius: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    box-shadow: 5px 7px 6px rgba(128, 128, 128, 0.5);
+}
+
+.comments p {
+    font-size: 0.7rem;
+    margin: 10px 10px;
+}
+
+.comment-date-container {
+    text-align: right;
+}
+
+.comment-date-container p {
+    font-size: 0.6rem;
+    color: var(--vehicleTalk-red);
+}
+
+/* Media queries */
+@media (min-width: 600px) {    
+    nav img {
+        margin-left: 20px;
+        max-width: 200px;
+    }
+
+    .hamburger-menu,
+    .close-Menu  {
+        margin-right: 20px;
+        font-size: 2rem;
+    }
+
+    .navigation-items {
+        padding-bottom: 500px;
+        max-width: 250px;
+    }
+
+    .navigation-items p {
+        font-size: 1.6rem;
+    }
+
+    form.searchbar input[type="search"],
+    form.searchbar button {
+        font-size: 1.6rem;
+    }
+
+    .footer-social .fab {
+        font-size: 1.6rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .intro-paragaph-container p {
+        font-size: 0.9rem;
+    }
+
+    .about-image {
+        min-width: 100%;
+        max-height: 50vh;
+    }
+
+    .image-modal-container {
+        padding-top: 30px;
+    }
+    
+    .image-modal {
+        display: block;
+        max-width: 1000px;
+        max-height: 100%;
+    }
+    
+    .closebtn {
+        top: 30px;
+        right: 60px;
+    }
+
+    .inputsandbuttons {
+        font-size: 1.2rem;
+    }
+
+    .formError {
+        margin-left: 35px;
+    }
+}

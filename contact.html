@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Welcome to VehicleTalk contact page! We would love to hear from you about what cars or other vehicles you would like to read about or if you have any other feedback about our website feel free to contact us.">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/variables.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/kdv6ypz.css">
+    <link rel="stylesheet" href="https://use.typekit.net/kdv6ypz.css">
+    <script src="https://kit.fontawesome.com/591f5bf3d7.js" crossorigin="anonymous"></script>
+    <title>VehicleTalk | Contact us</title>
+    <!-- Hotjar Tracking Code for https://reverent-aryabhata-026bd1.netlify.app/ -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 2721236, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="images/logo.JPG" alt="The Logo of VehicleTalck"></a>
+            <div class="hamburger-container">
+                <button class="menu-button"><i id="hamburger-menu" class="fas fa-bars hamburger-menu open"
+                        title="Open Menu" aria-label="Open Menu" aria-hidden="true" alt="Open menu"><span
+                            class="alt-text">Open Menu</span></i></button>
+                <div class="close-nav-menu">
+                    <button class="menu-button"><i class="fas fa-times close-Menu close" title="Close Menu"><span
+                                class="alt-text">Close Menu</span></i></button>
+                </div>
+            </div>
+        </nav>
+        <section id="nav-menu-container">
+            <div class="navigation-items">
+                <form action="search-result.html?search=" class="searchbar">
+                    <input type="search" id="search" name="search" placeholder="Search" alt="search">
+                    <div id="search-button-container">
+                        <button type="submit" id="searchbutton" name="searchbutton"><i
+                                class="fas fa-search"></i></button>
+                    </div>
+                </form>
+                <a href="index.html">
+                    <p>Home</p>
+                </a>
+                <a href="about.html">
+                    <p>About</p>
+                </a>
+                <a href="blogs.html">
+                    <p>Blogs</p>
+                </a>
+                <a href="contact.html">
+                    <p class="current">Contact</p>
+                </a>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section id="top-image">
+            <img src="images/marcus-p-ZV0vyy2UxBU-unsplash.jpg"
+                alt="a red porche GT3 is seen from behind driving down a road" class="homepage-image">
+        </section>
+        <section id="intro-section" class="intro-section">
+            <h1>Contact us</h1>
+            <div class="intro-paragaph-container">
+                <p>
+                    We would love to hear from you. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                    nonumy eirmod
+                    tempor
+                    invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+        </section>
+        <section id="messageContainer" class="intro-section">
+
+        </section>
+        <section id="contact-form-container">
+            <div id="success-message-container" class="intro-section ">
+
+            </div>
+            <form action="" method="POST" class="contact-form" id="contact-form">
+                <input type="text" name="name" id="name" placeholder="Name, minimum 5 characters"
+                    alt="name, minimum 5 characters" class="inputsandbuttons inputs">
+                <p class="formError" id="nameError">Please enter your name, must be longer then 5 characters</p>
+                <input type="email" name="email" id="email" placeholder="Email" alt="email"
+                    class="inputsandbuttons inputs">
+                <p class="formError" id="emailError">Please enter a valid email</p>
+                <input type="text" name="subject" id="subject" placeholder="Subject, minimum 15 characters"
+                    alt="subject, minimum 15 characters" class="inputsandbuttons inputs">
+                <p class="formError" id="subjectError">Please enter a subject longer then 15 characters</p>
+                <textarea name="message" id="message" placeholder="Your message, minimum 25 characters"
+                    alt="your message, minimum 5 characters" class="inputsandbuttons inputs message"></textarea>
+                <p class="formError" id="messageError">Please enter a message longer then 25 characters</p>
+                <button id="submit-message-btn" class="inputsandbuttons buttons" type="submit">Submit
+                    Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-social">
+            <a href=""><i class="fab fa-facebook-f" title="Facebook"></i></a>
+            <a href=""><i class="fab fa-twitter" title="Twitter"></i></a>
+            <a href=""><i class="fab fa-snapchat-ghost" title="Snapchat"></i></a>
+            <a href=""><i class="fab fa-instagram" title="Instagram"></i></a>
+            <a href=""><i class="fab fa-tiktok" title="Tiktok"></i></a>
+            <a href=""><i class="fab fa-youtube" title="Youtube"></i></a>
+        </div>
+    </footer>
+    <script src="js/reusable.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

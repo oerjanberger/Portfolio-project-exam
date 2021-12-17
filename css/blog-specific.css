@@ -1,0 +1,56 @@
+@media (min-width: 600px) {
+    .authorinfo-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .profilepicture {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .author-info p,
+    .blog-specific-date  {
+        font-size: 0.8rem;
+    }
+
+    .tags {
+        max-width: 70px;
+        max-height: 30px;
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+
+    .quote-container {
+        text-align: center;
+        margin: 10px 0px;
+    }
+
+    .quote {
+        font-size: 2rem;
+    }
+
+    .links-to-other-blogs p {
+        font-size: 1.1rem;
+    }
+
+    .all-blogs {
+        max-width: 120px;
+        max-height: 40px;
+        padding: 7px;
+    }
+
+    .comments {
+        max-width: 500px;
+        width: 500px;
+    }
+
+    .comments p {
+        margin: 20px;
+    }
+    
+    .comments p,
+    .comment-date-container p {
+        font-size: 0.9rem;
+    }
+}
